@@ -11,9 +11,18 @@ namespace Algo
         static void Main(string[] args)
         {
 
+        }
 
+        private static int GererMenu(List<string> menu)
+        {
+            foreach (var ligne in menu)
+            {
+                Console.WriteLine(ligne);
+            }
 
-
+            int choix;
+            choix = int.Parse(Console.ReadLine());
+            return choix;
         }
     }
 }
