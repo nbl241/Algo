@@ -13,16 +13,34 @@ namespace Algo
 
         }
 
-        private static int GererMenu(List<string> menu)
+        private static int GererMenu(List<MenuItem> menu)
         {
-            foreach (var ligne in menu)
+            foreach (MenuItem ligne in menu)
             {
-                Console.WriteLine(ligne);
+                Console.WriteLine($"{ligne.Numero}- {ligne.Libelle}");
             }
 
+            Console.WriteLine("saisir un choix");
             int choix;
             choix = int.Parse(Console.ReadLine());
-            return choix;
+
+            foreach (MenuItem Item in menu)
+            {
+                if (choix == Item.Numero)
+                {
+                    return choix;
+                }
+            }
+            return -1;
+
+            //return menu.SingleOrDefault(x => x.Numero == choix) != null ? choix : -1;
         }
+    }
+
+    class MenuItem
+    {
+        public int Numero { get; set; }
+
+        public string Libelle { get; set; }
     }
 }
