@@ -11,6 +11,9 @@ namespace Algo
         static void Main(string[] args)
         {
 
+
+
+
         }
 
         private static int GererMenu(List<string> menu)
