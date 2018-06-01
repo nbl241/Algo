@@ -10,20 +10,32 @@ namespace Algo
     {
         static void Main(string[] args)
         {
-
+            List<MenuItem> list = new List<MenuItem>
+            {
+                new MenuItem {Numero = 1, Libelle ="menu 1"},
+                new MenuItem {Numero = 3, Libelle ="menu 3"},
+                new MenuItem {Numero = 4, Libelle ="menu 4"},
+            };
+            int resultat = GererMenu(list);
+            Console.WriteLine(resultat);
+            Console.ReadLine();
         }
 
         private static int GererMenu(List<MenuItem> menu)
         {
+            //Affiche les elements d menu
             foreach (MenuItem ligne in menu)
             {
                 Console.WriteLine($"{ligne.Numero}- {ligne.Libelle}");
             }
 
+            //recuperation du choix de l'utilisateur
             Console.WriteLine("saisir un choix");
             int choix;
             choix = int.Parse(Console.ReadLine());
-            while(true)
+
+            //test du choix par rapport aux elements du menu
+            while (true)
             {
                 foreach (MenuItem Item in menu)
                 {
@@ -35,10 +47,6 @@ namespace Algo
                 Console.WriteLine("Erreur lors de la saisie");
                 choix = int.Parse(Console.ReadLine());
             }
-
-            //return -1;
-
-            //return menu.SingleOrDefault(x => x.Numero == choix) != null ? choix : -1;
         }
     }
 
