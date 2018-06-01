@@ -12,10 +12,11 @@ namespace Algo
         {
             List<MenuItem> list = new List<MenuItem>
             {
-                new MenuItem {Numero = 1, Libelle ="menu 1"},
-                new MenuItem {Numero = 3, Libelle ="menu 3"},
-                new MenuItem {Numero = 4, Libelle ="menu 4"},
+                new MenuItem { Libelle ="menu " },
+                new MenuItem { Libelle ="menu "},
+                new MenuItem { Libelle ="menu "},
             };
+
             int resultat = GererMenu(list);
             Console.WriteLine(resultat);
             Console.ReadLine();
@@ -29,10 +30,13 @@ namespace Algo
 
         private static int GererMenu(List<MenuItem> menu)
         {
+            int Num = 0;
+            Num++;
+
             //Affiche les elements d menu
             foreach (MenuItem ligne in menu)
             {
-                Console.WriteLine($"{ligne.Numero}- {ligne.Libelle}");
+                Console.WriteLine($"{ligne.Numero = Num++}- {ligne.Libelle}");
             }
 
             //recuperation du choix de l'utilisateur
