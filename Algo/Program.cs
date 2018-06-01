@@ -21,6 +21,12 @@ namespace Algo
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Affiche un menu, test et recupere la saisie de l'utilisateur
+        /// </summary>
+        /// <param name="menu">la liste des choix possible</param>
+        /// <returns>le choix de l'utilisateur</returns>
+
         private static int GererMenu(List<MenuItem> menu)
         {
             //Affiche les elements d menu
@@ -49,6 +55,10 @@ namespace Algo
             }
         }
     }
+
+    /// <summary>
+    /// Represente une ligne d'un menu
+    /// </summary>
 
     class MenuItem
     {
