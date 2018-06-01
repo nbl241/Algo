@@ -23,15 +23,20 @@ namespace Algo
             Console.WriteLine("saisir un choix");
             int choix;
             choix = int.Parse(Console.ReadLine());
-
-            foreach (MenuItem Item in menu)
+            while(true)
             {
-                if (choix == Item.Numero)
+                foreach (MenuItem Item in menu)
                 {
-                    return choix;
+                    if (choix == Item.Numero)
+                    {
+                        return choix;
+                    }
                 }
+                Console.WriteLine("Erreur lors de la saisie");
+                choix = int.Parse(Console.ReadLine());
             }
-            return -1;
+
+            //return -1;
 
             //return menu.SingleOrDefault(x => x.Numero == choix) != null ? choix : -1;
         }
