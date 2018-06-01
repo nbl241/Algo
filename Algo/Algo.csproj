@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MonMenu\Menu.cs" />
+    <Compile Include="MonMenu\Menu1.cs" />
     <Compile Include="MonMenu\MenuItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
